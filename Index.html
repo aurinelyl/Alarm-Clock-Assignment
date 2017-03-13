@@ -1,0 +1,46 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="Alarmclock2.css">
+</head>
+<body>
+<div id="displayTime" class="Style"></div>
+<script>
+
+//I had no idea how to approach this assignment and honestly had to look at several tutorials because I didn't know where start. This one was a combination of a few that I could actually grasp// 
+
+function givemeTime() {
+	var currentTime = new Date();
+	var diem = "AM";
+	// I saw some tutorials without "diem" but that seemed a little more complicated and I was no able to follow//
+	var h = currentTime.getHours();
+	var m = currentTime.getMinutes();
+    var s = currentTime.getSeconds();
+	setTimeout('givemeTime()',1000);
+	//setTimeout is going to run givemeTime every second based on the instructions below//
+    if (h == 0) {
+		h = 12;
+	} else if (h > 12) { 
+		h = h - 12;
+		diem="PM";
+	//this was added in order to differentiate am and pm hours. If the current hour is greater than 12pm then pm is displayed//
+	}
+if (h < 10) {
+h = "0" + h;
+}
+if (m < 10) {
+m = "0" + m;
+}
+if (s < 10) {
+s = "0" + s;
+}
+//same rule applied to minutes and seconds as well//
+var myClock = document.getElementById('displayTime');
+//get element will get value from 'displayTime' using getElementById//
+	myClock.innerText = h + ":" + m + ":" + s + " " + diem;
+}
+givemeTime();
+ 
+//I could not figure out how to get the alarm function at all. I tried several times and eventually gave up.//
+</script>
+</body>
+</html>

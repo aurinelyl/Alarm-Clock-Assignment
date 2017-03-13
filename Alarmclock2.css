@@ -1,0 +1,19 @@
+#displayTime{
+	text-align: center;
+	font-size: 95px;
+	color: rgb(255,102,102);
+	font-weight: bolder;
+	width: 600px;
+	height:200px;
+	padding: 310px;
+	margin:0 auto;
+	background-image:url(http://lumaville.com/wp-content/uploads/2014/02/10025436-letters-cut-from-newspaper-background-600x270.jpg)
+   
+
+}
+body{
+	background-color: rgb(255,103,103);
+}
+
+  
+
